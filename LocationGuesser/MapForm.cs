@@ -20,6 +20,7 @@ namespace FindMyLocations
 {
 	public partial class MapForm : Form
 	{
+		//hate git sometimes
 		private static string currentUrl;
 		private List<Location> locations;
 
