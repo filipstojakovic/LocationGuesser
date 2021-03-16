@@ -20,8 +20,6 @@ namespace FindMyLocations
 {
 	public partial class MapForm : Form
 	{
-		//TODO: reset map to default location
-		//TODO: reset distace text
 		private static string currentUrl;
 		private List<Location> locations;
 
