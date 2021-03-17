@@ -35,6 +35,10 @@ namespace FindMyLocations
 			this.chooseBtn = new System.Windows.Forms.Button();
 			this.newLocation = new System.Windows.Forms.Button();
 			this.distanceLbl = new System.Windows.Forms.Label();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+			this.tableLayoutPanel1.SuspendLayout();
+			this.flowLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// splitter1
@@ -47,16 +51,16 @@ namespace FindMyLocations
 			// 
 			// map
 			// 
-			this.map.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.map.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.map.Bearing = 0F;
+			this.map.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.map.CanDragMap = true;
+			this.map.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.map.EmptyTileColor = System.Drawing.Color.Navy;
 			this.map.GrayScaleMode = false;
 			this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
 			this.map.LevelsKeepInMemory = 5;
-			this.map.Location = new System.Drawing.Point(836, 0);
+			this.map.Location = new System.Drawing.Point(659, 3);
 			this.map.MarkersEnabled = true;
 			this.map.MaxZoom = 2;
 			this.map.MinZoom = 2;
@@ -70,25 +74,24 @@ namespace FindMyLocations
 			this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
 			this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
 			this.map.ShowTileGridLines = false;
-			this.map.Size = new System.Drawing.Size(483, 377);
+			this.map.Size = new System.Drawing.Size(650, 365);
 			this.map.TabIndex = 1;
 			this.map.Zoom = 0D;
 			// 
 			// webBrowser
 			// 
-			this.webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.webBrowser.Location = new System.Drawing.Point(0, 0);
+			this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webBrowser.Location = new System.Drawing.Point(3, 3);
 			this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
 			this.webBrowser.Name = "webBrowser";
-			this.webBrowser.Size = new System.Drawing.Size(842, 742);
+			this.tableLayoutPanel1.SetRowSpan(this.webBrowser, 2);
+			this.webBrowser.Size = new System.Drawing.Size(650, 736);
 			this.webBrowser.TabIndex = 2;
 			// 
 			// chooseBtn
 			// 
 			this.chooseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.chooseBtn.Location = new System.Drawing.Point(1127, 486);
+			this.chooseBtn.Location = new System.Drawing.Point(3, 3);
 			this.chooseBtn.Name = "chooseBtn";
 			this.chooseBtn.Size = new System.Drawing.Size(172, 104);
 			this.chooseBtn.TabIndex = 3;
@@ -99,7 +102,7 @@ namespace FindMyLocations
 			// newLocation
 			// 
 			this.newLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.newLocation.Location = new System.Drawing.Point(1127, 611);
+			this.newLocation.Location = new System.Drawing.Point(280, 3);
 			this.newLocation.Name = "newLocation";
 			this.newLocation.Size = new System.Drawing.Size(172, 104);
 			this.newLocation.TabIndex = 4;
@@ -112,26 +115,57 @@ namespace FindMyLocations
 			this.distanceLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.distanceLbl.AutoSize = true;
 			this.distanceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.distanceLbl.Location = new System.Drawing.Point(1121, 451);
+			this.distanceLbl.Location = new System.Drawing.Point(181, 78);
 			this.distanceLbl.Name = "distanceLbl";
 			this.distanceLbl.Size = new System.Drawing.Size(93, 32);
 			this.distanceLbl.TabIndex = 5;
 			this.distanceLbl.Text = "label1";
 			this.distanceLbl.Visible = false;
 			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tableLayoutPanel1.AutoSize = true;
+			this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.tableLayoutPanel1.ColumnCount = 2;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Controls.Add(this.webBrowser, 0, 0);
+			this.tableLayoutPanel1.Controls.Add(this.map, 1, 0);
+			this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 2;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(1312, 742);
+			this.tableLayoutPanel1.TabIndex = 6;
+			// 
+			// flowLayoutPanel1
+			// 
+			this.flowLayoutPanel1.Controls.Add(this.chooseBtn);
+			this.flowLayoutPanel1.Controls.Add(this.distanceLbl);
+			this.flowLayoutPanel1.Controls.Add(this.newLocation);
+			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(659, 374);
+			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(650, 365);
+			this.flowLayoutPanel1.TabIndex = 3;
+			// 
 			// MapForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1311, 742);
-			this.Controls.Add(this.distanceLbl);
-			this.Controls.Add(this.newLocation);
-			this.Controls.Add(this.chooseBtn);
-			this.Controls.Add(this.webBrowser);
-			this.Controls.Add(this.map);
+			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.splitter1);
 			this.Name = "MapForm";
 			this.Text = "Form1";
+			this.tableLayoutPanel1.ResumeLayout(false);
+			this.flowLayoutPanel1.ResumeLayout(false);
+			this.flowLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -145,6 +179,8 @@ namespace FindMyLocations
 		private System.Windows.Forms.Button chooseBtn;
 		private System.Windows.Forms.Button newLocation;
 		private System.Windows.Forms.Label distanceLbl;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 	}
 }
 

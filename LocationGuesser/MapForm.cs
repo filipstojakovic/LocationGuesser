@@ -73,7 +73,7 @@ namespace FindMyLocations
 		private void Map_OnMapClick(PointLatLng pointClick, MouseEventArgs e)
 		{
 			mapModel.removeMarker(chosenLocationMarker);
-			chosenLocationMarker = mapModel.placeMarkerOnMap(pointClick);
+			chosenLocationMarker = mapModel.placeMarkerOnMap(pointClick, GMarkerGoogleType.yellow_pushpin);
 			Console.WriteLine(chosenLocationMarker.Position);
 		}
 
@@ -84,9 +84,7 @@ namespace FindMyLocations
 			map.OnMapClick += Map_OnMapClick;
 			distanceLbl.Visible = false;
 
-			mapModel.removeMarker(currentLocationMarker);
-			mapModel.removeMarker(chosenLocationMarker);
-			mapModel.removePolygon(polygon);
+			mapModel.removeAll();
 
 			mapModel.defaultMapPosition();
 			initRandomStreetLocation();

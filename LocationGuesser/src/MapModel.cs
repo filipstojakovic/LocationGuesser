@@ -28,7 +28,12 @@ namespace FindMyLocations.src
 
 		public GMapMarker placeMarkerOnMap(PointLatLng location)
 		{
-			GMapMarker tmpMarker = new GMarkerGoogle(location, GMarkerGoogleType.red_pushpin);
+			return placeMarkerOnMap(location,GMarkerGoogleType.red_pushpin);
+		}
+
+		public GMapMarker placeMarkerOnMap(PointLatLng location, GMarkerGoogleType markerType)
+		{
+			GMapMarker tmpMarker = new GMarkerGoogle(location, markerType);
 			map.Overlays.Add(markersOverlay);
 			markersOverlay.Markers.Add(tmpMarker);
 			return tmpMarker;
@@ -64,13 +69,19 @@ namespace FindMyLocations.src
 
 		internal void initMap()
 		{
-			map.MapProvider = GMapProviders.GoogleMap;
+			map.MapProvider = GMapProviders.GoogleMap; // set minimap proveder (type)
 			map.DragButton = MouseButtons.Left; // enable dragging
 			map.MouseWheelZoomEnabled = true;
 			map.MinZoom = Constants.MIN_ZOOM;
 			map.MaxZoom = Constants.MAX_ZOOM;
 			map.Zoom = Constants.MIN_ZOOM;
-			map.ShowCenter = true;
+			map.ShowCenter = true; //TODO: uncomment me
+		}
+
+		public void removeAll()
+		{
+			markersOverlay.Markers.Clear();
+			polygonOverlay.Polygons.Clear();
 		}
 
 		public void removeMarker(GMapMarker marker)
