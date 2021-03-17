@@ -53,7 +53,7 @@ namespace FindMyLocations.src
 		//very complex method for calculating distance
 		public string calculateDistance(GMapPolygon polygon)
 		{
-			return String.Format("{0:0.##}", polygon.Distance);     // distance in km
+			return String.Format("distance: {0:0.##} km", polygon.Distance);     // distance in km
 		}
 
 		public void defaultMapPosition()

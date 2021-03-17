@@ -19,6 +19,12 @@ namespace FindMyLocations.src
 				   lng == location.lng;
 		}
 
-		
+		public override int GetHashCode()
+		{
+			int hashCode = 2124363670;
+			hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(lat);
+			hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(lng);
+			return hashCode;
+		}
 	}
 }

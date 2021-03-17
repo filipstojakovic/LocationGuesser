@@ -85,6 +85,8 @@ namespace FindMyLocations
 			distanceLbl.Visible = false;
 
 			mapModel.removeAll();
+			chosenLocationMarker = null;
+			currentLocationMarker = null;
 
 			mapModel.defaultMapPosition();
 			initRandomStreetLocation();
@@ -106,7 +108,7 @@ namespace FindMyLocations
 			mapModel.zoomToCoverMarkers();
 
 			distanceLbl.Visible = true;
-			distanceLbl.Text = mapModel.calculateDistance(polygon) + " km";
+			distanceLbl.Text = mapModel.calculateDistance(polygon);
 
 			map.OnMapClick -= Map_OnMapClick;
 			((Control)webBrowser).Enabled = false;
@@ -140,11 +142,6 @@ namespace FindMyLocations
 					link.Style = "display:none";
 				}
 			}
-		}
-
-		private void MapForm_SizeChanged(object sender, EventArgs e)
-		{
-			Console.WriteLine($"{ this.Width},{this.Height}");
 		}
 	}
 }
