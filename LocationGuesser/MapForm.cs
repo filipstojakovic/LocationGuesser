@@ -142,5 +142,9 @@ namespace FindMyLocations
 			}
 		}
 
+		private void MapForm_SizeChanged(object sender, EventArgs e)
+		{
+			Console.WriteLine($"{ this.Width},{this.Height}");
+		}
 	}
 }

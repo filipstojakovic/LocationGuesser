@@ -60,7 +60,7 @@ namespace FindMyLocations
 			this.map.GrayScaleMode = false;
 			this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
 			this.map.LevelsKeepInMemory = 5;
-			this.map.Location = new System.Drawing.Point(659, 3);
+			this.map.Location = new System.Drawing.Point(876, 3);
 			this.map.MarkersEnabled = true;
 			this.map.MaxZoom = 2;
 			this.map.MinZoom = 2;
@@ -74,7 +74,7 @@ namespace FindMyLocations
 			this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
 			this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
 			this.map.ShowTileGridLines = false;
-			this.map.Size = new System.Drawing.Size(650, 365);
+			this.map.Size = new System.Drawing.Size(431, 365);
 			this.map.TabIndex = 1;
 			this.map.Zoom = 0D;
 			// 
@@ -85,7 +85,8 @@ namespace FindMyLocations
 			this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
 			this.webBrowser.Name = "webBrowser";
 			this.tableLayoutPanel1.SetRowSpan(this.webBrowser, 2);
-			this.webBrowser.Size = new System.Drawing.Size(650, 736);
+			this.webBrowser.ScrollBarsEnabled = false;
+			this.webBrowser.Size = new System.Drawing.Size(867, 736);
 			this.webBrowser.TabIndex = 2;
 			// 
 			// chooseBtn
@@ -102,7 +103,7 @@ namespace FindMyLocations
 			// newLocation
 			// 
 			this.newLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.newLocation.Location = new System.Drawing.Point(280, 3);
+			this.newLocation.Location = new System.Drawing.Point(3, 113);
 			this.newLocation.Name = "newLocation";
 			this.newLocation.Size = new System.Drawing.Size(172, 104);
 			this.newLocation.TabIndex = 4;
@@ -130,8 +131,8 @@ namespace FindMyLocations
 			this.tableLayoutPanel1.AutoSize = true;
 			this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.tableLayoutPanel1.ColumnCount = 2;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
 			this.tableLayoutPanel1.Controls.Add(this.webBrowser, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.map, 1, 0);
 			this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
@@ -140,7 +141,7 @@ namespace FindMyLocations
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(1312, 742);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(1310, 742);
 			this.tableLayoutPanel1.TabIndex = 6;
 			// 
 			// flowLayoutPanel1
@@ -149,9 +150,9 @@ namespace FindMyLocations
 			this.flowLayoutPanel1.Controls.Add(this.distanceLbl);
 			this.flowLayoutPanel1.Controls.Add(this.newLocation);
 			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(659, 374);
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(876, 374);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(650, 365);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(431, 365);
 			this.flowLayoutPanel1.TabIndex = 3;
 			// 
 			// MapForm
@@ -162,7 +163,9 @@ namespace FindMyLocations
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.splitter1);
 			this.Name = "MapForm";
-			this.Text = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Location Guesser";
+			this.SizeChanged += new System.EventHandler(this.MapForm_SizeChanged);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.flowLayoutPanel1.ResumeLayout(false);
 			this.flowLayoutPanel1.PerformLayout();
