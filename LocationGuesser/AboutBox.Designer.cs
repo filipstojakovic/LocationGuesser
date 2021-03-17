@@ -82,11 +82,12 @@ namespace LocationGuesser
 			// labelProductName
 			// 
 			this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.labelProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelProductName.Location = new System.Drawing.Point(230, 0);
 			this.labelProductName.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
 			this.labelProductName.MaximumSize = new System.Drawing.Size(0, 21);
 			this.labelProductName.Name = "labelProductName";
-			this.labelProductName.Size = new System.Drawing.Size(322, 21);
+			this.labelProductName.Size = new System.Drawing.Size(403, 26);
 			this.labelProductName.TabIndex = 19;
 			this.labelProductName.Text = "Product Name";
 			this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,11 +95,12 @@ namespace LocationGuesser
 			// labelVersion
 			// 
 			this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelVersion.Location = new System.Drawing.Point(230, 32);
 			this.labelVersion.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
 			this.labelVersion.MaximumSize = new System.Drawing.Size(0, 21);
 			this.labelVersion.Name = "labelVersion";
-			this.labelVersion.Size = new System.Drawing.Size(322, 21);
+			this.labelVersion.Size = new System.Drawing.Size(403, 26);
 			this.labelVersion.TabIndex = 0;
 			this.labelVersion.Text = "Version";
 			this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,11 +108,12 @@ namespace LocationGuesser
 			// labelCopyright
 			// 
 			this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelCopyright.Location = new System.Drawing.Point(230, 64);
 			this.labelCopyright.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
 			this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 21);
 			this.labelCopyright.Name = "labelCopyright";
-			this.labelCopyright.Size = new System.Drawing.Size(322, 21);
+			this.labelCopyright.Size = new System.Drawing.Size(403, 26);
 			this.labelCopyright.TabIndex = 21;
 			this.labelCopyright.Text = "Copyright";
 			this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,11 +121,12 @@ namespace LocationGuesser
 			// labelCompanyName
 			// 
 			this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.labelCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelCompanyName.Location = new System.Drawing.Point(230, 96);
 			this.labelCompanyName.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
 			this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 21);
 			this.labelCompanyName.Name = "labelCompanyName";
-			this.labelCompanyName.Size = new System.Drawing.Size(322, 21);
+			this.labelCompanyName.Size = new System.Drawing.Size(403, 26);
 			this.labelCompanyName.TabIndex = 22;
 			this.labelCompanyName.Text = "Company Name";
 			this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,6 +135,7 @@ namespace LocationGuesser
 			// 
 			this.tableLayoutPanel.SetColumnSpan(this.textBoxDescription, 2);
 			this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBoxDescription.Location = new System.Drawing.Point(8, 132);
 			this.textBoxDescription.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
 			this.textBoxDescription.Multiline = true;
