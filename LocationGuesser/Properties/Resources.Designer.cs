@@ -63,19 +63,9 @@ namespace LocationGuesser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6111770_stock_photo_pin_map_iconon_a_blue_map {
+        internal static System.Drawing.Bitmap map_1280x728 {
             get {
-                object obj = ResourceManager.GetObject("6111770_stock-photo-pin-map-iconon-a-blue-map", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap map_1272165_1280 {
-            get {
-                object obj = ResourceManager.GetObject("map-1272165_1280", resourceCulture);
+                object obj = ResourceManager.GetObject("map_1280x728", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

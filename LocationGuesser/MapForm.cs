@@ -3,6 +3,7 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using LocationGuesser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,11 +45,11 @@ namespace FindMyLocations
 
 			initializeMap();
 			initRandomStreetLocation();
+			//Utils.SetMyButtonIcon(chooseBtn, @"C:/Users/filip/Desktop/pin.ico");
 		}
 
 		private void initRandomStreetLocation()
 		{
-			stopwatch.Start();
 			if (locations.Count == 0)
 				locations = FindMyLocations.src.Location.getAllLocations();
 
@@ -139,6 +140,9 @@ namespace FindMyLocations
 		//hide helpful elements/attributes
 		private void WebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
 		{
+			stopwatch.Reset();
+			stopwatch.Start();
+
 			var doc = webBrowser.Document as HtmlDocument;
 			var links = doc.GetElementsByTagName("div");
 			foreach (HtmlElement link in links)
@@ -162,6 +166,11 @@ namespace FindMyLocations
 				string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", timespan.Hours, timespan.Minutes, timespan.Seconds);
 				timerLbl.Text = elapsedTime;
 			}
+		}
+
+		private void backBtn_Click(object sender, EventArgs e)
+		{
+			new AboutBox().ShowDialog();
 		}
 	}
 }

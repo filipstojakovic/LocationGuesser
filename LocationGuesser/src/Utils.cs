@@ -3,10 +3,12 @@ using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FindMyLocations.src
 {
@@ -17,7 +19,13 @@ namespace FindMyLocations.src
             return new Random().Next(maxNum);   // [0, maxNum) 
 		}
 
-
+        public static void SetMyButtonIcon(Button button, String iconPath)
+        {
+            button.Image = Image.FromFile(iconPath);// Assign an image to the button.
+            // Align the image and text on the button.
+            button.ImageAlign = ContentAlignment.MiddleLeft;
+            button.TextAlign = ContentAlignment.MiddleRight;
+        }
 
         public static string getUrlFromCoordinates(Location location)
         {

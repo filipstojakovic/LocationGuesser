@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FindMyLocations")]
-[assembly: AssemblyDescription("Simple game. Find your location on map")]
+[assembly: AssemblyTitle("Location Guesser")]
+[assembly: AssemblyDescription("Location Guesser is a geography game which takes you on a journey around the world and challenges your ability to recognize your surroundings.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FindMyLocations")]
+[assembly: AssemblyProduct("Filip Stojaković's product")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

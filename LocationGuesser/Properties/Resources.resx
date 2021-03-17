@@ -118,10 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="6111770_stock-photo-pin-map-iconon-a-blue-map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6111770_stock-photo-pin-map-iconon-a-blue-map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map-1272165_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map-1272165_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="map_1280x728" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-1280x728.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

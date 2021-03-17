@@ -75,7 +75,7 @@ namespace FindMyLocations.src
 			map.MinZoom = Constants.MIN_ZOOM;
 			map.MaxZoom = Constants.MAX_ZOOM;
 			map.Zoom = Constants.MIN_ZOOM;
-			map.ShowCenter = true; //TODO: uncomment me
+			map.ShowCenter = false;
 		}
 
 		public void removeAll()

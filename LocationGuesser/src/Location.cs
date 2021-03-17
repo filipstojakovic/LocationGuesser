@@ -15,7 +15,7 @@ namespace FindMyLocations.src
 
 		public static List<Location> getAllLocations()
 		{
-			string json = System.IO.File.ReadAllText("./../../resource/locations.json");
+			string json = System.IO.File.ReadAllText("./../../locations/locations.json");
 			return JsonConvert.DeserializeObject<List<Location>>(json);
 		}
 

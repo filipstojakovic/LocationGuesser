@@ -37,8 +37,8 @@ namespace FindMyLocations
 			this.distanceLbl = new System.Windows.Forms.Label();
 			this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
 			this.timerLbl = new System.Windows.Forms.Label();
-			this.backBtn = new System.Windows.Forms.Button();
 			this.chooseBtn = new System.Windows.Forms.Button();
+			this.backBtn = new System.Windows.Forms.Button();
 			this.timer = new System.Windows.Forms.Timer(this.components);
 			this.tableLayoutPanel.SuspendLayout();
 			this.SuspendLayout();
@@ -152,22 +152,6 @@ namespace FindMyLocations
 			this.timerLbl.TabIndex = 3;
 			this.timerLbl.Text = "00:00:00";
 			// 
-			// backBtn
-			// 
-			this.backBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.backBtn.BackColor = System.Drawing.Color.DodgerBlue;
-			this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.backBtn.ForeColor = System.Drawing.Color.White;
-			this.backBtn.Location = new System.Drawing.Point(1381, 1033);
-			this.backBtn.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-			this.backBtn.Name = "backBtn";
-			this.backBtn.Size = new System.Drawing.Size(667, 111);
-			this.backBtn.TabIndex = 6;
-			this.backBtn.Text = "Back to start";
-			this.backBtn.UseVisualStyleBackColor = false;
-			// 
 			// chooseBtn
 			// 
 			this.chooseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -184,6 +168,23 @@ namespace FindMyLocations
 			this.chooseBtn.Text = "Choose";
 			this.chooseBtn.UseVisualStyleBackColor = false;
 			this.chooseBtn.Click += new System.EventHandler(this.chooseBtn_Click);
+			// 
+			// backBtn
+			// 
+			this.backBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.backBtn.BackColor = System.Drawing.Color.DodgerBlue;
+			this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.backBtn.ForeColor = System.Drawing.Color.White;
+			this.backBtn.Location = new System.Drawing.Point(1381, 1033);
+			this.backBtn.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
+			this.backBtn.Name = "backBtn";
+			this.backBtn.Size = new System.Drawing.Size(667, 111);
+			this.backBtn.TabIndex = 6;
+			this.backBtn.Text = "About";
+			this.backBtn.UseVisualStyleBackColor = false;
+			this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
 			// 
 			// timer
 			// 
