@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -27,8 +28,10 @@ namespace FindMyLocations
 		private MapModel mapModel;
 
 		private GMapMarker currentLocationMarker; // your position on map
-		private GMapMarker chosenLocationMarker;	// onMapClicked position
+		private GMapMarker chosenLocationMarker;    // onMapClicked position
 		private GMapPolygon polygon;
+
+		private Stopwatch stopwatch;
 
 		public MapForm()
 		{
@@ -36,13 +39,19 @@ namespace FindMyLocations
 			InitializeComponent();
 
 			mapModel = new MapModel(ref map);
-			locations = new LocationGrabber().getAllLocations();
-			initRandomStreetLocation();
+			locations = FindMyLocations.src.Location.getAllLocations();
+			stopwatch = new Stopwatch();
+
 			initializeMap();
+			initRandomStreetLocation();
 		}
 
 		private void initRandomStreetLocation()
 		{
+			stopwatch.Start();
+			if (locations.Count == 0)
+				locations = FindMyLocations.src.Location.getAllLocations();
+
 			Location randomLocation = getAndPopRandomLocation();
 			navigateToLocation(randomLocation);
 		}
@@ -95,6 +104,7 @@ namespace FindMyLocations
 
 		private void chooseBtn_Click(object sender, EventArgs e)
 		{
+			stopwatch.Stop();
 			if (chosenLocationMarker == null)
 			{
 				MessageBox.Show("Please select location first", "Need location"
@@ -141,6 +151,16 @@ namespace FindMyLocations
 				{
 					link.Style = "display:none";
 				}
+			}
+		}
+
+		private void timer_Tick(object sender, EventArgs e)
+		{
+			if (stopwatch != null && stopwatch.IsRunning)
+			{
+				TimeSpan timespan = stopwatch.Elapsed;
+				string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", timespan.Hours, timespan.Minutes, timespan.Seconds);
+				timerLbl.Text = elapsedTime;
 			}
 		}
 	}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,12 @@ namespace FindMyLocations.src
 		public string lat { get; set; }
 		public string lng { get; set; }
 		public string formatted_address { get; set; }
+
+		public static List<Location> getAllLocations()
+		{
+			string json = System.IO.File.ReadAllText("./../../resource/locations.json");
+			return JsonConvert.DeserializeObject<List<Location>>(json);
+		}
 
 		public override bool Equals(object obj)
 		{
