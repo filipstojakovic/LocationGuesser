@@ -13,5 +13,8 @@ namespace FindMyLocations.src
 
 		public const int MAX_ZOOM = 17;
 		public const int MIN_ZOOM = 1;
+
+		public const double DEFAULT_LAT = 33.1375511923461;
+		public const double DEFAULT_LNG = -10.546875;
 	}
 }

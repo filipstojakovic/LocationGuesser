@@ -58,7 +58,7 @@ namespace FindMyLocations.src
 
 		public void defaultMapPosition()
 		{
-			map.Position = new PointLatLng(33.1375511923461,-10.546875);
+			map.Position = new PointLatLng(Constants.DEFAULT_LAT, Constants.DEFAULT_LNG);
 			map.Zoom = Constants.MIN_ZOOM;
 		}
 
