@@ -31,6 +31,7 @@ namespace FindMyLocations
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapForm));
+			
 			this.map = new GMap.NET.WindowsForms.GMapControl();
 			this.webBrowser = new System.Windows.Forms.WebBrowser();
 			this.newLocation = new System.Windows.Forms.Button();

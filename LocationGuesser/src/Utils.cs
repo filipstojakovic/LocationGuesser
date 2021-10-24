@@ -43,8 +43,8 @@ namespace FindMyLocations.src
             string latstrin = matches[0].Groups[2].Value;
             string lngstring = matches[0].Groups[4].Value;
 
-            var lat = Convert.ToDouble(latstrin.Replace('.',','));
-            var lng = Convert.ToDouble(lngstring.Replace('.', ','));
+            var lat = Convert.ToDouble(latstrin);//.Replace('.',','));
+            var lng = Convert.ToDouble(lngstring);//.Replace('.', ','));
             return new PointLatLng(lat, lng);
         }
 
