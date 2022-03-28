@@ -147,7 +147,8 @@ namespace FindMyLocations
 			var links = doc.GetElementsByTagName("div");
 			foreach (HtmlElement link in links)
 			{
-				if (link.GetAttribute("className") == "app-viewcard-strip"
+				if (link.GetAttribute("className").Contains("app-viewcard-strip")
+					|| link.GetAttribute("className") == "scene-footer-container noprint"
 					|| link.GetAttribute("id") == "titlecard"
 					|| link.GetAttribute("id") == "image-header"
 					|| link.GetAttribute("id") == "fineprint"
